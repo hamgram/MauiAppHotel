@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.Sobre"
+             Title="Sobre">
+    <VerticalStackLayout>
+        <Label 
+            Text="Sobre Nós"
+            FontSize="30"
+            HorizontalTextAlignment="Center"
+            Margin="0,30,0,30"/>
+
+        <Grid RowDefinitions="Auto,Auto,Auto" 
+              ColumnDefinitions="*, *"
+              RowSpacing="10"
+              Padding="10">
+
+            <Label Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center" Text="Aplicativo"/>
+            <Label Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" Text="Reserva Diária"/>
+
+            <Label Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Center" Text="Desenvolvedor"/>
+            <Label Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Center" Text="Hamilton"/>
+
+            <Label Grid.Row="2" Grid.Column="0" HorizontalTextAlignment="Center" Text="Versão"/>
+            <Label Grid.Row="2" Grid.Column="1" HorizontalTextAlignment="Center" Text="1.2"/>
+
+        </Grid>
+
+        <Button Text="Home" 
+                BackgroundColor="LightGray"
+                TextColor="Black"
+                Clicked="Button_Clicked"
+                WidthRequest="150"/>
+
+
+    </VerticalStackLayout>
+</ContentPage>
