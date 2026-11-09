@@ -15,7 +15,7 @@
         <Label Text="Cálculo de Diária"
                TextColor="DarkBlue"
                HorizontalTextAlignment="Center"
-               FontFamily="OswaldRegular"
+               FontFamily="OswaldBold"
                FontSize="40"
                Margin="0,0,0,50"/>
 
@@ -33,10 +33,15 @@
                 </Grid>
 
                 <Label Text="Selecione sua acomodação"
+                       FontFamily="OswaldBold"
+                       FontSize="20"
                        HorizontalTextAlignment="Center"
                        Margin="0, 20, 0, 5"/>
 
-                <Picker x:Name="pck_quarto"/>
+                <Picker x:Name="pck_quarto"
+                        ItemDisplayBinding="{Binding Nome}"
+                        Title="Selecione sua suite"
+                        FontFamily="OswaldLight"/>
 
                 <Border StrokeShape="RoundRectangle 10"
                         BackgroundColor="{StaticResource Gray200}"
@@ -48,7 +53,7 @@
                           Padding="10">
                           
                         <Label Grid.Row="0" Grid.Column="0"  Text="Data Check-in"/>
-                        <DatePicker x:Name="dtpck_checkin"  Grid.Row="0" Grid.Column="1"/>
+                        <DatePicker x:Name="dtpck_checkin" DateSelected="dtpck_checkin_DateSelected" Grid.Row="0" Grid.Column="1"/>
                         
                         <Label Grid.Row="1" Grid.Column="0"  Text="Data Check-out"/>
                         <DatePicker x:Name="dtpck_checkout" Grid.Row="1" Grid.Column="1"/>
@@ -56,12 +61,17 @@
                     </Grid>
                 </Border>
 
-                <Button Text="Calcular!"/>
+                <Button Text="Calcular!"
+                        Clicked="Button_Clicked_1"/>
+                
+                
+                
                 <Button Text="Sobre Nós" 
                         BackgroundColor="LightGray"
                         TextColor="Black"
                         Clicked="Button_Clicked"
                         Margin="0,10"/>
+                
             </VerticalStackLayout>
    
            
